@@ -5,6 +5,10 @@ date: "May 25, 2019"
 output: html_document
 ---
 
+```{r setup}
+knitr::opts_chunk$set(echo=TRUE)
+```
+
 ```{r Packages}
 library(stats)
 library(dplyr)
