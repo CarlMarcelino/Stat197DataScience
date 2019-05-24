@@ -2,13 +2,15 @@
 title: "Stat 197 Data Science Course Project 4 (Exploratory Graphs)"
 author: "Carl Gerard T. Marcelino and Lance Solano"
 date: "May 25, 2019"
-output: html_document
+output: 
+  html_document:
+    highlight: kate
+    theme: journal
 ---
 
 
 
 ```{r Packages, echo=TRUE, message=FALSE, warning=FALSE}
-library(stats)
 library(dplyr)
 library(ggplot2)
 ```
@@ -32,7 +34,7 @@ barplot(Totals/10^6, main = "Total PM2.5 Emissions in the United States (1,000,0
 )
 ```
 
-#####Total emissions have decreased in the US from 1999 to 2008.
+####Total emissions have decreased in the US from 1999 to 2008.
 
 
 
@@ -51,7 +53,7 @@ barplot(TotalsBaltimore, main = "Total PM2.5 Emissions in Baltimore City (Tons)"
 )
 ```
 
-#####The total emissions from PM2.5 have decreased in Baltimore City, Maryland from 1999 to 2008.
+####The total emissions from PM2.5 have decreased in Baltimore City, Maryland from 1999 to 2008.
 
 
 
@@ -72,9 +74,9 @@ ggplotBaltimoreBySourceType <- ggplot(Baltimore, aes(factor(year), Emissions, fi
 print(ggplotBaltimoreBySourceType)
 ```
 
-#####The non-road, nonpoint, on-road source types have all seen decreased emissions overall from 1999-2008 in Baltimore City.
+####The non-road, nonpoint, on-road source types have all seen decreased emissions overall from 1999-2008 in Baltimore City.
 
-#####Only the point source type has seen an increase in emissions from 1999 until 2005 at which point decreases again until 2008.
+####Only the point source type has seen an increase in emissions from 1999 until 2005 at which point decreases again until 2008.
 
 
 
@@ -99,9 +101,9 @@ barplot(x/10^5, main = "Total PM2.5 Emissions from Coal Combustion Sources
 )
 ```
 
-#####Emissions from coal combustion-related sources have decreased over the years.
+####Emissions from coal combustion-related sources have decreased over the years.
 
-#####We can see that emissions have dropped by about a third of the total emissions from 1999 to 2008.
+####We can see that emissions have dropped by about a third of the total emissions from 1999 to 2008.
 
 
 
@@ -124,9 +126,9 @@ barplot(y, main = "Total PM2.5 Emissions from Vehicles in Baltimore City (Tons)"
 )
 ```
 
-#####Emissions from motor-vehicle sources have decreased from 1999 until 2008.
+####Emissions from motor-vehicle sources have decreased from 1999 until 2008.
 
-#####Emissions have dropped by a about three eigths from 1999 to 2008.
+####Emissions have dropped by a about three eigths from 1999 to 2008.
 
 
 
@@ -165,6 +167,6 @@ barplot(b, main = "Los Angeles",
 mtext("Total Vehicle PM2.5 Emissions (Tons)", side=3, outer=TRUE, cex=1.4)
 ```
 
-#####The total PM2.5 emissions from vehicle sources has decreased over the given time period in Baltimore City, but has increased with time in Los Angeles.
+####The total PM2.5 emissions from vehicle sources has decreased over the given time period in Baltimore City, but has increased with time in Los Angeles.
 
-#####It can be seen that Los Angeles has the greater changes from 1999 to 2008 in motor vehicle emissions.
+####It can be seen that Los Angeles has the greater changes from 1999 to 2008 in motor vehicle emissions.
